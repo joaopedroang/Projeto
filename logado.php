@@ -8,8 +8,10 @@ $query = mysqli_query ($conexao, $select);
 $dados = mysqli_fetch_row ($query);
 
 if ($login==$dados[1] && $senha==$dados[2]) {
-    echo "Conectado";
+    session_start();
+    $_SESSION['nome']= $dados[0];
+    header('location: index.php');
 } else {
-    echo "Dados inválidos";
+    header('location: login.php');
 }
-?>
+?> 

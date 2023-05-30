@@ -1,26 +1,32 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="estilos/style.css">
+    <title>Document</title>
 </head>
 <body>
-    <main>
-        <section id="login">
-            <div id="imagem">
-
-            </div>
-            <div id="formulario">
-                <h1>Login</h1>
-                <p>Seja bem vindo(a)!</p>
-                <form action="login.php" method="post">
-
-                </form>
-            </div>
-        </section>
-    </main>
+    <div>
+        <h1>
+            Olá,
+            <?php
+                if(isset($_SESSION['nome'])==null) {
+            ?>
+                visitante <br>
+            <a href="login.php"> Login</a>
+            <?php
+            } else {
+                echo $_SESSION['nome'];
+            } ?><br>
+            <a href = 'cadastro.php'> Cadastro</a><br>
+            <a href = 'logout.php'> Sair</a>
+        </h1>
+    </div>   
+</body>
+</html>
 </body>
 </html>

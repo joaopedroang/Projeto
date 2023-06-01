@@ -10,7 +10,7 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <center>
         <h1>
             Olá,
             <?php
@@ -25,7 +25,7 @@ session_start();
             <a href = 'cadastro.php'> Cadastro</a><br>
             <a href = 'logout.php'> Sair</a>
         </h1>
-    </div>   
+    </center>   
 </body>
 </html>
 </body>

@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+<center>
         <h1>
-            <form id="cadastrar" action="cadastrar.php" method="POST">
-            Nome: <input type="text" name="nome2"><br>
-            Login: <input type="text" name="login2"><br>
-            Senha: <input type="password" name = "senha2"><br>
-            <input type = "submit" name = "cadastrar" value = "Cadastrar">
+            <form id="login" action="cadastrar.php" method="POST">
+                Nome: <input type="text" name="nome" required><br> 
+                Login: <input type="text" name="login" required><br>
+                Senha: <input type="password" name = "senha" required><br>
+                <input type = "submit" name = "cadastrar" value = "Cadastrar">
+            </form>
         </h1>
-    </div>
-    
+    </center>
 </body>
 </html>

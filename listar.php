@@ -1,3 +1,12 @@
+<?php
+include ("conexao.php");
+$login= $login = isset ($_POST ['login']) ? $_POST['login'] : '';
+$senha= isset ($_POST ['senha']) ? $_POST ['senha'] : '';
+
+$select="SELECT nome, login FROM login";
+$query= mysqli_query ($conexao, $select);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +18,7 @@
 </head>
 <body>
     <center>
-        <h2>Olá, visitante</h2><br><br>
-        <form id="form-login" action="logado.php" method="POST">
-            Login: <input type="text" name="login" required><br>
-            Senha: <input type="password" name ="senha" required><br><br>
-            <input type = "submit" name = "entrar" value = "Entrar">
-        </form>
+        
     </center>
 </body>
 </html>

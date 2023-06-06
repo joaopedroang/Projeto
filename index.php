@@ -13,20 +13,20 @@ session_start();
 <body>
     <center>
         <h1>
-            Olá,
-            <?php
-                if(isset($_SESSION['nome'])==null) {
-            ?>
-                visitante <br>
-            <a href="login.php"> Login</a>
-            <?php
-            } else {
-                echo $_SESSION['nome'];
-            } ?><br>
-            <a href= 'cadastro.php'> Cadastro</a><br>
-            <a href= 'alt_senha.php'> Alterar senha</a><br>
-            <a href= 'list_usuario.php'> Listar usuários</a><br>
-            <a href = 'logout.php'> Sair</a>
+            <h1>Olá, 
+                <?php 
+					if(isset($_SESSION['nome_usuario']) == null) { ?>
+						Visitante</h1>
+						<a href="login.php">Login</a><br>
+					<?php } else {
+						echo $_SESSION['nome_usuario']; ?>
+					</h1>
+					<a href="cadastro.php">Cadastrar</a><br>
+					<a href="listar.php">Listar Usuários</a><br>
+					<a href="alterar.php">Alterar Senha</a><br>
+					<a href="logout.php">Sair</a>
+					<?php 
+				} ?>
         </h1>
     </center>   
 </body>

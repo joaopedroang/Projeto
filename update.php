@@ -1,11 +1,12 @@
 <?php
 include ("conexao.php");
-$login= $login = isset ($_POST ['login'])?$_POST['login']: '';
-$senha= isset ($_POST ['senha'])?$_POST ['senha']: '';
+$login = isset ($_POST ['login']) ? $_POST['login'] : '';
+$senha= isset ($_POST ['senha']) ? $_POST ['senha'] : '';
 
-$update="update login set '$senha' where login = '$login'";
+$update="UPDATE login SET senha = '$senha' WHERE login = '$login'";
 $query= mysqli_query ($conexao, $update);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

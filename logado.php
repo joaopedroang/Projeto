@@ -1,7 +1,8 @@
 <?php
 include('conexao.php');
-$login = isset($_POST['login']) ? $_POST['login'] : '';
-$senha = isset($_POST['senha']) ? $_POST['senha'] : '';
+
+$login = isset($_POST['login'])?$_POST['login'] : '';
+$senha = isset($_POST['senha'])?$_POST['senha'] : '';
 
 $select = "SELECT nome, login, senha FROM login 
 			WHERE login = '$login' AND senha = '$senha'";
@@ -15,5 +16,4 @@ if ($login == $dados[1] && $senha == $dados[2]) {
 } else {
 	header('Location: login.php');
 }
-
 ?>

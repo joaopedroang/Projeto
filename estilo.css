@@ -15,12 +15,16 @@ body {
 }
 
 a {
-    color: red;
+    color: blue;
     text-decoration: none;
 }
 a:hover {
-    color: blue;
+    color: red;
 }
 
-https://cssgradient.io/
-https://cssgradient.io/
+p {
+    text-align: center;
+    font-size: 10px;
+    color: blue; 
+}
+

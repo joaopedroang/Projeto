@@ -3,8 +3,7 @@ include ("conexao.php");
 $login= $login = isset ($_POST ['login']) ? $_POST['login'] : '';
 $senha= isset ($_POST ['senha']) ? $_POST ['senha'] : '';
 
-$select="SELECT nome, login FROM login";
-$query= mysqli_query ($conexao, $select);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +17,21 @@ $query= mysqli_query ($conexao, $select);
 </head>
 <body>
     <center>
-        
+        <h1>
+            <?php
+            $select="SELECT nome, login FROM login";
+            $resultado= mysqli_query ($conexao, $select);
+            if (mysqli_num_rows($resultado) > 0) {
+                while ($row = mysqli_fetch_assoc($resultado)) {
+                    echo "ID: " . $row["login"] . " - Nome: " . $row["nome"] . "<br>";
+                }
+            } else {
+                echo "Nenhum resultado encontrado.";
+            }
+            ?>
+            <br><br>
+            <a href="index.php">Voltar</a>
+        </h1>
     </center>
 </body>
 </html>

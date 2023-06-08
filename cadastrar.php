@@ -18,9 +18,13 @@ $query = mysqli_query($conexao, $insert);
 	<title></title>
 </head>
 <body>
-	<center>
-		Cadastro Executado com sucesso<br><br>
-		<a href="index.php">Voltar</a>
-	</center>
+	<section>
+		<center>
+			<h1>
+				Cadastro Executado com sucesso<br><br>
+				<a href="index.php">Voltar</a>
+			</h1>
+		</center>
+	</section>
 </body>
 </html>

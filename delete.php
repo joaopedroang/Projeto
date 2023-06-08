@@ -1,10 +1,10 @@
 <?php
 include ("conexao.php");
 $login = isset ($_POST ['login']) ? $_POST['login'] : '';
-$senha= isset ($_POST ['senha']) ? $_POST ['senha'] : '';
+$nome= isset ($_POST ['nome']) ? $_POST ['nome'] : '';
 
-$update="UPDATE login SET senha = '$senha' WHERE login = '$login'";
-$query= mysqli_query ($conexao, $update);
+$delet="DELETE FROM login WHERE nome = '$nome'";
+$query= mysqli_query ($conexao, $delet);
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +19,8 @@ $query= mysqli_query ($conexao, $update);
 <body>
     <section>
         <center>
-            <h2>Senha alterada com sucesso!</h2>
-            <a href="login.php">Voltar</a>
+            <h2>Usuário deletado!</h2>
+            <a href="index.php">Voltar</a>
         </center>
     </section>
 </body>

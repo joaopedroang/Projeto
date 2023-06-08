@@ -8,13 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h2>Olá, visitante</h2><br><br>
-        <form id="form-login" action="logado.php" method="POST">
-            Login: <input type="text" name="login" required><br>
-            Senha: <input type="password" name ="senha" required><br><br>
-            <input type = "submit" name = "entrar" value = "Entrar">
-        </form>
-    </center>
+    <main>
+        <section>
+            <div>
+                <center>
+                    <h1>Olá, visitante</h1><br><br>
+                    <form id="form-login" action="logado.php" method="POST">
+                        Login: <input type="text" name="login" required><br>
+                        Senha: <input type="password" name ="senha" required><br><br>
+                        <input type = "submit" name = "entrar" value = "Entrar">
+                    </form>
+                </center>
+            </div>    
+        </section>
+    </main>
 </body>
 </html>

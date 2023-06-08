@@ -16,22 +16,24 @@ $senha= isset ($_POST ['senha']) ? $_POST ['senha'] : '';
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h1>
-            <?php
-            $select="SELECT nome, login FROM login";
-            $resultado= mysqli_query ($conexao, $select);
-            if (mysqli_num_rows($resultado) > 0) {
-                while ($row = mysqli_fetch_assoc($resultado)) {
-                    echo "ID: " . $row["login"] . " - Nome: " . $row["nome"] . "<br>";
+    <section id="Lista">
+        <center>
+            <h1>
+                <?php
+                $select="SELECT nome, login FROM login";
+                $resultado= mysqli_query ($conexao, $select);
+                if (mysqli_num_rows($resultado) > 0) {
+                    while ($row = mysqli_fetch_assoc($resultado)) {
+                        echo "ID: " . $row["login"] . " - Nome: " . $row["nome"] . "<br>";
+                    }
+                } else {
+                    echo "Nenhum resultado encontrado.";
                 }
-            } else {
-                echo "Nenhum resultado encontrado.";
-            }
-            ?>
-            <br><br>
-            <a href="index.php">Voltar</a>
-        </h1>
-    </center>
+                ?>
+                <br><br>
+                <a href="index.php">Voltar</a>
+            </h1>
+        </center>
+    </section>
 </body>
 </html>

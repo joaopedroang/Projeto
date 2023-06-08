@@ -8,11 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+    <section>
     <center>
-        <h1>
-            <h2>Olá, bem vindo!</h2>
-            <a href="login.php">Realizar login</a>
-        </h1>
-    </center>
+            <h1>
+                <h2>Olá, bem vindo!</h2>
+                <form id="logar" action="login.php" method="POST">
+                <input type="submit" name="logar" value="Efetuar login">
+                </form>
+            </h1>
+        </center>
+    </section>
 </body>
 </html>

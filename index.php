@@ -11,7 +11,8 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <center>
+    <section>
+        <center>
         <h1>
             <h1>Olá, 
                 <?php 
@@ -21,13 +22,15 @@ session_start();
 					<?php } else {
 						echo $_SESSION['nome_usuario']; ?>
 					</h1>
-					<a href="cadastro.php">Cadastrar</a><br>
-					<a href="listar.php">Listar Usuários</a><br>
-					<a href="alterar.php">Alterar Senha</a><br>
+					<a href="cadastro.php">Cadastrar</a><br><br>
+                    <a href="deletar.php">Apagar usuário</a><br><br>
+					<a href="listar.php">Listar Usuários</a><br><br>
+					<a href="alterar.php">Alterar Senha</a><br><br>
 					<a href="logout.php">Sair</a>
 					<?php 
 				} ?>
         </h1>
-    </center>   
+        </center>
+    </section>   
 </body>
 </html>
